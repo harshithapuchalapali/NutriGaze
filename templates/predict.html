@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Classification</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- CSS File -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body class="body-predict">
+  <div class="container">
+    <div class="coin">
+      <h2>Image Classification</h2>
+    
+    <!-- SINGLE FORM -->
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+      <label for="file-hi">Upload Your Image :</label>
+      <input type="file" id="file" name="file" accept="image/*" required />
+      <button type="submit" class="btn">predict</button>
+    
+    </form>  
+  </div>
+  <div class="nav-buttons">
+    <a href="{{ url_for('about') }}" class="nav-button left">← Previous</a>
+    <a href="{{ url_for('home') }}" class="nav-button center">Back to Home</a>
+    <a href="{{ url_for('contact') }}" class="nav-button right">Next →</a>
+</div>
+</body>
+</html>

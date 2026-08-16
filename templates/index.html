@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriGaze&nbsp;| GreenGuard Insight</title>
+
+  <!-- Google font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+  <!---- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+
+    <nav class="navbar">
+      <h1 class="logo">NUTRIGAZE</h1>
+
+      <!-- Normal nav links -->
+      <ul class="nav-links">
+    
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+
+      </ul>
+
+      <!-- Hamburger for small screens -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="hero-content">
+      <h2>GREENGUARD&nbsp;INSIGHTS</h2>
+      <p>
+        We are a team of innovative scientists and technologists dedicated to
+        ensuring your produce is always fresh and healthy.
+      </p>
+      <a href="{{ url_for('about') }}" class="btn">Get Started</a>
+      
+      
+    </div>
+  </header>
+
+  <script>
+    /* Simple hamburger toggle */
+    const ham   = document.querySelector(".hamburger");
+    const links = document.querySelector(".nav-links");
+    ham.addEventListener("click", () => {
+      links.classList.toggle("open");
+      ham.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
